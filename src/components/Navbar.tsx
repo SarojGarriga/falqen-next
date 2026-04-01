@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import Image from "next/image";
+import Link from "next/link";
 
 interface NavbarProps {
   onCtaClick: () => void;
@@ -22,13 +23,16 @@ const Navbar = ({ onCtaClick }: NavbarProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Image src="/falqen-logo.png" alt="Falqen" width={120} height={32} className="h-8 w-auto" />
+        <Link href="/">
+          <Image src="/falqen-logo.png" alt="Falqen" width={120} height={32} className="h-8 w-auto" />
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollTo("services")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">Process</button>
-          <button onClick={() => scrollTo("comparison")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">Why Email</button>
+          <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</Link>
+          <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
           <button onClick={() => scrollTo("results")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">Results</button>
-          <button onClick={() => scrollTo("faq")} className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</button>
+          <Link href="/es" className="text-sm text-muted-foreground hover:text-foreground transition-colors">ES</Link>
           <button onClick={toggle} className="p-2 rounded-lg hover:bg-secondary transition-colors">
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
@@ -50,9 +54,10 @@ const Navbar = ({ onCtaClick }: NavbarProps) => {
       {mobileOpen && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-3">
           <button onClick={() => scrollTo("services")} className="block w-full text-left text-sm text-muted-foreground hover:text-foreground">Process</button>
-          <button onClick={() => scrollTo("comparison")} className="block w-full text-left text-sm text-muted-foreground hover:text-foreground">Why Email</button>
+          <Link href="/services" onClick={() => setMobileOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground">Services</Link>
+          <Link href="/blog" onClick={() => setMobileOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground">Blog</Link>
           <button onClick={() => scrollTo("results")} className="block w-full text-left text-sm text-muted-foreground hover:text-foreground">Results</button>
-          <button onClick={() => scrollTo("faq")} className="block w-full text-left text-sm text-muted-foreground hover:text-foreground">FAQ</button>
+          <Link href="/es" onClick={() => setMobileOpen(false)} className="block text-sm text-muted-foreground hover:text-foreground">ES — Español</Link>
           <Button onClick={() => { onCtaClick(); setMobileOpen(false); }} className="w-full rounded-2xl font-semibold">Get Started</Button>
         </div>
       )}

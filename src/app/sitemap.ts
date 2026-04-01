@@ -1,0 +1,19 @@
+import { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://falqen.com";
+  const now = new Date();
+
+  return [
+    { url: base, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${base}/services`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/es`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${base}/blog/how-to-get-more-b2b-sales-meetings`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog/cold-email-agency-vs-in-house`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog/b2b-appointment-setting-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog/como-conseguir-reuniones-de-ventas-b2b`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog/email-frio-vs-publicidad-google`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog/agencia-prospección-b2b-guia`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+  ];
+}
