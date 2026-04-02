@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Email Frío vs. Google Ads para B2B: ¿Cuál Funciona Mejor en 2026? — Falqen",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function ArticleES2() {
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="article" title="Email Frío vs. Google Ads para B2B: ¿Cuál Funciona Mejor en 2026?" description="Comparamos el coste por lead, la escalabilidad y el ROI del email frío y Google Ads para empresas B2B. Los datos hablan por sí solos." url="https://falqen.com/blog/email-frio-vs-publicidad-google" datePublished="2026-03-18" lang="es" />
       <div className="h-16" />
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl">

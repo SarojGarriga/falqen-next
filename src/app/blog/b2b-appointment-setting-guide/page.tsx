@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "The Complete Guide to B2B Appointment Setting (2026 Edition) — Falqen",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function Article3() {
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="article" title="The Complete Guide to B2B Appointment Setting (2026 Edition)" description="Everything you need to know about B2B appointment setting: what it is, how it works, what to look for in an agency, how to measure success, and real benchmarks." url="https://falqen.com/blog/b2b-appointment-setting-guide" datePublished="2026-03-01" />
       <div className="h-16" />
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Cold Email Agency vs. In-House SDR: Which Delivers More ROI in 2026? — Falqen",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
 export default function Article2() {
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="article" title="Cold Email Agency vs. In-House SDR: Which Delivers More ROI in 2026?" description="A detailed cost and performance comparison between hiring a cold email agency and building an in-house SDR team for B2B lead generation in 2026." url="https://falqen.com/blog/cold-email-agency-vs-in-house" datePublished="2026-02-18" />
       <div className="h-16" />
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl">

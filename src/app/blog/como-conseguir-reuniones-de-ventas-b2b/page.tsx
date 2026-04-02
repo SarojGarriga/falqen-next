@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Cómo Conseguir Más Reuniones de Ventas B2B en 2026 (Sin Gastar en Publicidad) — Falqen",
@@ -23,8 +24,10 @@ export const metadata: Metadata = {
 };
 
 export default function ArticleES1() {
+
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="article" title="Cómo Conseguir Más Reuniones de Ventas B2B en 2026 (Sin Gastar en Publicidad)" description="Guía completa para llenar tu calendario con reuniones de ventas calificadas usando email frío y LinkedIn. Sin depender de Google Ads ni Meta Ads." url="https://falqen.com/blog/como-conseguir-reuniones-de-ventas-b2b" datePublished="2026-02-10" lang="es" />
       <div className="h-16" />
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl">

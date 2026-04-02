@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Guía para Elegir una Agencia de Prospección B2B en 2026 — Falqen",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function ArticleES3() {
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="article" title="Guía para Elegir una Agencia de Prospección B2B en 2026" description="Todo lo que necesitas saber antes de contratar una agencia de prospección outbound B2B: preguntas clave, señales de alerta, métricas a exigir y cómo evaluar resultados." url="https://falqen.com/blog/agencia-prospección-b2b-guia" datePublished="2026-03-10" lang="es" />
       <div className="h-16" />
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4 max-w-3xl">

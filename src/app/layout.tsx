@@ -3,6 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ContactFormProvider } from "@/components/ContactFormProvider";
 import { ClientShell } from "@/components/ClientShell";
+import { LangProvider } from "@/components/LangProvider";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "Falqen | B2B Appointment Setting & Qualified Meeting Generation",
@@ -51,10 +53,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Schema type="org" />
         <ThemeProvider>
-          <ContactFormProvider>
-            <ClientShell>{children}</ClientShell>
-          </ContactFormProvider>
+          <LangProvider>
+            <ContactFormProvider>
+              <ClientShell>{children}</ClientShell>
+            </ContactFormProvider>
+          </LangProvider>
         </ThemeProvider>
       </body>
     </html>

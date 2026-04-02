@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
   title: "B2B Appointment Setting Services | Cold Email & LinkedIn Outreach — Falqen",
@@ -87,6 +88,13 @@ const process = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
+      <Schema type="faq" items={[
+        { question: "How is this different from buying a lead list?", answer: "A lead list gives you names. We give you conversations. We research, verify, write, send, follow up, and only hand you prospects who have expressed interest in a call." },
+        { question: "Will cold email hurt my domain reputation?", answer: "Never. We use completely separate domains and inboxes for all outreach. Your main domain and email are untouched. We set up full SPF, DKIM, and DMARC authentication on every sending domain." },
+        { question: "How long until I see my first meeting?", answer: "Setup takes 7–10 days. After launch, most clients see their first reply within 48 hours and their first booked meeting within the first week." },
+        { question: "Do I need to be involved day-to-day?", answer: "No. You fill out an onboarding form, we handle everything. You just show up to the calls we book for you." },
+        { question: "What industries do you work with?", answer: "We work with B2B companies across SaaS, professional services, logistics, manufacturing, healthcare IT, fintech, and more." },
+      ]} />
       {/* Nav spacer */}
       <div className="h-16" />
 

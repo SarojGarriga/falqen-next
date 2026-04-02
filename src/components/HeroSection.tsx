@@ -5,10 +5,36 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Zap, CalendarCheck, TrendingUp, Users, DollarSign, BarChart3, Mail } from "lucide-react";
+import { useLang } from "@/components/LangProvider";
 
 interface HeroSectionProps {
   onCtaClick: () => void;
 }
+
+const T = {
+  en: {
+    badge: "We send 500K+ emails every month",
+    h1a: "We Get You", h1b: "Sales Meetings.", h1c: "You Just", h1d: "Close Deals.", h1e: "That Simple.",
+    p: "We send emails and LinkedIn messages to people who need what you sell. They reply. They book a call with you. You close the deal. We handle everything else.",
+    btn1: "I Want More Clients", btn2: "Talk to Us Free",
+    tag1: "Email", tag2: "LinkedIn", tag3: "More Clients",
+    liveNow: "Live Right Now", livePing: "Campaigns sending right now",
+    todayLabel: "Emails Sent Today", counting: "and counting...",
+    stat1: "Total Emails Sent", stat2: "Total Meetings Booked", stat3: "Deals This Week", stat4: "Reply Rate",
+    ai: "AI Powered", updates: "Updates Daily",
+  },
+  es: {
+    badge: "Enviamos más de 500.000 emails al mes",
+    h1a: "Conseguimos tus", h1b: "Reuniones de Ventas.", h1c: "Tú Solo", h1d: "Cierras Deals.", h1e: "Así de Simple.",
+    p: "Enviamos emails y mensajes de LinkedIn a las personas que necesitan lo que vendes. Ellos responden. Reservan una llamada. Tú cierras el deal. Nosotros nos encargamos de todo lo demás.",
+    btn1: "Quiero Más Clientes", btn2: "Hablar Gratis",
+    tag1: "Email", tag2: "LinkedIn", tag3: "Más Clientes",
+    liveNow: "En Tiempo Real", livePing: "Campañas enviando ahora mismo",
+    todayLabel: "Emails Enviados Hoy", counting: "y contando...",
+    stat1: "Total Emails Enviados", stat2: "Reuniones Totales", stat3: "Deals Esta Semana", stat4: "Tasa de Respuesta",
+    ai: "Powered by IA", updates: "Se actualiza cada día",
+  },
+};
 
 const seededRandom = (seed: number) => {
   const x = Math.sin(seed * 9301 + 49297) * 49297;
@@ -19,44 +45,36 @@ const getCounterValues = () => {
   const baseDate = new Date("2024-01-01");
   const now = new Date();
   const daysSince = Math.floor((now.getTime() - baseDate.getTime()) / (1000 * 60 * 60 * 24));
-
   const dayOfWeek = now.getDay();
   const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-
   let emailTotal = 1_245_890;
   let meetingsTotal = 476_259;
-
   for (let d = 0; d < daysSince; d++) {
     const date = new Date(baseDate.getTime() + d * 86400000);
     const dow = date.getDay();
     if (dow === 0 || dow === 6) continue;
     emailTotal += Math.round(1483 + seededRandom(d * 7 + 1) * (7043 - 1483));
   }
-
   const weeksSince = Math.floor(daysSince / 7);
   for (let w = 0; w < weeksSince; w++) {
     meetingsTotal += Math.round(452 + seededRandom(w * 13 + 3) * (954 - 452));
   }
-
   const weekStart = daysSince - (dayOfWeek === 0 ? 6 : dayOfWeek - 1);
   const weeklyDeals = Math.round(452 + seededRandom(weekStart * 17 + daysSince) * (954 - 452));
   const todayEmails = isWeekend ? 0 : Math.round(1483 + seededRandom(daysSince * 31 + 5) * (7043 - 1483));
   const replyRate = (5.32 + seededRandom(daysSince * 41 + 9) * (9 - 5.32)).toFixed(2);
-
   return { emailTotal, meetingsTotal, weeklyDeals, todayEmails, replyRate };
 };
 
 const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
+  const lang = useLang();
+  const t = T[lang];
   const values = useMemo(() => getCounterValues(), []);
 
   const particles = useMemo(() =>
     Array.from({ length: 25 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 6 + 2,
-      duration: Math.random() * 10 + 15,
-      delay: Math.random() * 5,
+      id: i, x: Math.random() * 100, y: Math.random() * 100,
+      size: Math.random() * 6 + 2, duration: Math.random() * 10 + 15, delay: Math.random() * 5,
     })), []);
 
   return (
@@ -86,42 +104,40 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-primary/20">
               <Zap className="h-4 w-4" />
-              We send 500K+ emails every month
+              {t.badge}
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1] mb-6">
-              We Get You{" "}<span className="text-primary">Sales Meetings.</span><br />
-              You Just{" "}<span className="text-primary">Close Deals.</span><br />
-              <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">That Simple.</span>
+              {t.h1a}{" "}<span className="text-primary">{t.h1b}</span><br />
+              {t.h1c}{" "}<span className="text-primary">{t.h1d}</span><br />
+              <span className="bg-gradient-to-r from-success to-primary bg-clip-text text-transparent">{t.h1e}</span>
             </h1>
 
-            <p className="text-lg text-muted-foreground max-w-lg mb-8">
-              We send emails and LinkedIn messages to people who need what you sell. They reply. They book a call with you. You close the deal. We handle everything else.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-lg mb-8">{t.p}</p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button onClick={onCtaClick} size="lg" className="rounded-2xl px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all bg-gradient-to-r from-primary to-primary/80">
-                  I Want More Clients <ArrowRight className="ml-2 h-5 w-5" />
+                  {t.btn1} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button onClick={onCtaClick} variant="outline" size="lg" className="rounded-2xl px-8 py-6 text-base font-semibold border-primary/20 hover:bg-primary/5">
-                  Talk to Us Free
+                  {t.btn2}
                 </Button>
               </motion.div>
             </div>
 
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> Email</div>
-              <div className="flex items-center gap-2"><Users className="h-4 w-4 text-primary" /> LinkedIn</div>
-              <div className="flex items-center gap-2"><TrendingUp className="h-4 w-4 text-success" /> More Clients</div>
+              <div className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> {t.tag1}</div>
+              <div className="flex items-center gap-2"><Users className="h-4 w-4 text-primary" /> {t.tag2}</div>
+              <div className="flex items-center gap-2"><TrendingUp className="h-4 w-4 text-success" /> {t.tag3}</div>
             </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="relative">
             <div className="inline-flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <BarChart3 className="h-4 w-4" /> Live Right Now
+              <BarChart3 className="h-4 w-4" /> {t.liveNow}
             </div>
 
             <Card className="rounded-2xl border-border/50 shadow-xl relative overflow-hidden">
@@ -136,38 +152,38 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success" />
                   </span>
-                  <span className="text-xs text-muted-foreground">Campaigns sending right now</span>
+                  <span className="text-xs text-muted-foreground">{t.livePing}</span>
                 </div>
 
                 <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 mb-4 border border-primary/10">
                   <div className="flex items-center gap-2 mb-2">
                     <Mail className="h-5 w-5 text-primary" />
-                    <span className="text-sm font-medium text-foreground">Emails Sent Today</span>
+                    <span className="text-sm font-medium text-foreground">{t.todayLabel}</span>
                   </div>
                   <div className="text-5xl font-bold text-primary">{values.todayEmails.toLocaleString()}</div>
-                  <p className="text-xs text-muted-foreground mt-1">and counting...</p>
+                  <p className="text-xs text-muted-foreground mt-1">{t.counting}</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-secondary rounded-xl p-4">
                     <Zap className="h-4 w-4 text-primary mb-1" />
                     <div className="text-lg font-bold text-primary">{values.emailTotal.toLocaleString()}</div>
-                    <div className="text-[10px] text-muted-foreground">Total Emails Sent</div>
+                    <div className="text-[10px] text-muted-foreground">{t.stat1}</div>
                   </div>
                   <div className="bg-secondary rounded-xl p-4">
                     <CalendarCheck className="h-4 w-4 text-success mb-1" />
                     <div className="text-lg font-bold text-success">{values.meetingsTotal.toLocaleString()}</div>
-                    <div className="text-[10px] text-muted-foreground">Total Meetings Booked</div>
+                    <div className="text-[10px] text-muted-foreground">{t.stat2}</div>
                   </div>
                   <div className="bg-secondary rounded-xl p-4">
                     <DollarSign className="h-4 w-4 text-primary mb-1" />
                     <div className="text-lg font-bold text-primary">{values.weeklyDeals}</div>
-                    <div className="text-[10px] text-muted-foreground">Deals This Week</div>
+                    <div className="text-[10px] text-muted-foreground">{t.stat3}</div>
                   </div>
                   <div className="bg-secondary rounded-xl p-4">
                     <TrendingUp className="h-4 w-4 text-success mb-1" />
                     <div className="text-lg font-bold text-success">{values.replyRate}%</div>
-                    <div className="text-[10px] text-muted-foreground">Reply Rate</div>
+                    <div className="text-[10px] text-muted-foreground">{t.stat4}</div>
                   </div>
                 </div>
               </CardContent>
@@ -175,11 +191,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
 
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2 }}
               className="absolute -bottom-3 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-xs font-semibold shadow-lg">
-              ⚡ AI Powered
+              ⚡ {t.ai}
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.4 }}
               className="absolute -bottom-3 right-4 bg-success text-success-foreground px-4 py-2 rounded-full text-xs font-semibold shadow-lg">
-              Updates Daily
+              {t.updates}
             </motion.div>
           </motion.div>
         </div>

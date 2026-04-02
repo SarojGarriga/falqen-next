@@ -5,10 +5,24 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, ArrowRight, MapPin } from "lucide-react";
+import { useLang } from "@/components/LangProvider";
 
 interface ResultsSectionProps {
   onCtaClick: () => void;
 }
+
+const T = {
+  en: {
+    h2: "What Our Clients Say",
+    p: "Real people. Real businesses. Real results.",
+    btn: "I Want Results Like These",
+  },
+  es: {
+    h2: "Lo Que Dicen Nuestros Clientes",
+    p: "Personas reales. Negocios reales. Resultados reales.",
+    btn: "Quiero Resultados Como Estos",
+  },
+};
 
 const testimonials = [
   { quote: "We used to rely entirely on referrals, which is great until it dries up. Falqen built an outbound engine that actually works. We closed two major contracts in the first month purely from their email campaigns. The best part is I don't have to touch it—I just show up to the calls.", name: "Elias Thorne", title: "CEO", company: "Verta Logistics", location: "Austin, TX" },
@@ -29,6 +43,8 @@ const testimonials = [
 const scrollTestimonials = [...testimonials, ...testimonials];
 
 const ResultsSection = ({ onCtaClick }: ResultsSectionProps) => {
+  const lang = useLang();
+  const t = T[lang];
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -54,8 +70,8 @@ const ResultsSection = ({ onCtaClick }: ResultsSectionProps) => {
     <section id="results" className="py-20 md:py-28 bg-secondary/50">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">What Our Clients Say</h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">Real people. Real businesses. Real results.</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground mb-4">{t.h2}</h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">{t.p}</p>
         </motion.div>
 
         <div className="relative mb-10">
@@ -88,7 +104,7 @@ const ResultsSection = ({ onCtaClick }: ResultsSectionProps) => {
 
         <div className="text-center">
           <Button onClick={onCtaClick} size="lg" className="rounded-2xl px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 bg-gradient-to-r from-success to-success/80 text-success-foreground">
-            I Want Results Like These <ArrowRight className="ml-2 h-5 w-5" />
+            {t.btn} <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
