@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description: "A cost and performance breakdown to help you decide whether to outsource or build in-house.",
     url: "https://falqen.com/blog/cold-email-agency-vs-in-house",
   },
+  alternates: { canonical: "https://falqen.com/blog/cold-email-agency-vs-in-house" },
 };
 
 export default function Article2() {

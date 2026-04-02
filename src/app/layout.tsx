@@ -43,6 +43,7 @@ export const metadata: Metadata = {
       "Done-for-you B2B outreach. We send emails and LinkedIn messages, you close deals.",
   },
   metadataBase: new URL("https://falqen.com"),
+  alternates: { canonical: "https://falqen.com" },
 };
 
 export default function RootLayout({

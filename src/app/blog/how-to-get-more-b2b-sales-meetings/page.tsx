@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description: "A step-by-step playbook for filling your calendar with qualified meetings — no ads needed.",
     url: "https://falqen.com/blog/how-to-get-more-b2b-sales-meetings",
   },
+  alternates: { canonical: "https://falqen.com/blog/how-to-get-more-b2b-sales-meetings" },
 };
 
 export default function Article1() {

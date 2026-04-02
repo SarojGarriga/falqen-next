@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     url: "https://falqen.com/blog/como-conseguir-reuniones-de-ventas-b2b",
     locale: "es_ES",
   },
+  alternates: { canonical: "https://falqen.com/blog/como-conseguir-reuniones-de-ventas-b2b" },
 };
 
 export default function ArticleES1() {

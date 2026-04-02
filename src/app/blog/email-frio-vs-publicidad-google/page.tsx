@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     url: "https://falqen.com/blog/email-frio-vs-publicidad-google",
     locale: "es_ES",
   },
+  alternates: { canonical: "https://falqen.com/blog/email-frio-vs-publicidad-google" },
 };
 
 export default function ArticleES2() {

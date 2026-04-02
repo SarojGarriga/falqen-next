@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description: "Everything you need to know about B2B appointment setting — strategy, benchmarks, and how to choose an agency.",
     url: "https://falqen.com/blog/b2b-appointment-setting-guide",
   },
+  alternates: { canonical: "https://falqen.com/blog/b2b-appointment-setting-guide" },
 };
 
 export default function Article3() {

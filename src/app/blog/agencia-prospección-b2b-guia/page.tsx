@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     url: "https://falqen.com/blog/agencia-prospección-b2b-guia",
     locale: "es_ES",
   },
+  alternates: { canonical: "https://falqen.com/blog/agencia-prospección-b2b-guia" },
 };
 
 export default function ArticleES3() {

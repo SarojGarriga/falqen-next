@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: "Expert guides on cold email, LinkedIn outreach, and B2B appointment setting.",
     url: "https://falqen.com/blog",
   },
+  alternates: { canonical: "https://falqen.com/blog" },
 };
 
 const posts = [

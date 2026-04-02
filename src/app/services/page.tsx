@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description: "Done-for-you cold email and LinkedIn outreach. We book the meetings, you close the deals.",
     url: "https://falqen.com/services",
   },
+  alternates: { canonical: "https://falqen.com/services" },
 };
 
 const services = [
