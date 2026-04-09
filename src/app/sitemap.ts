@@ -22,5 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/vs/belkins`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/vs/cience`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/blog/best-b2b-appointment-setting-agencies`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/blog/best-cold-email-agency-for-b2b-saas`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/is-cold-email-still-effective-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/how-to-get-meetings-with-ceos-and-vps`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/why-cold-email-not-getting-replies`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 }
