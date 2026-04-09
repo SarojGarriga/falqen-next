@@ -15,5 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/como-conseguir-reuniones-de-ventas-b2b`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog/email-frio-vs-publicidad-google`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog/agencia-prospección-b2b-guia`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/cold-email-agency`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${base}/linkedin-outreach-agency`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${base}/b2b-lead-generation-agency`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/vs/belkins`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/vs/cience`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 }
