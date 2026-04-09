@@ -21,5 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/vs/belkins`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/vs/cience`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${base}/blog/best-b2b-appointment-setting-agencies`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
   ];
 }
