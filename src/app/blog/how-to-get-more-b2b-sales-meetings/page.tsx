@@ -3,9 +3,9 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "How to Get More B2B Sales Meetings in 2026 (Without Paying for Ads) — Falqen",
+  title: "How to Get More B2B Sales Meetings in 2026 — 7 Tactics That Actually Work",
   description:
-    "A step-by-step playbook for filling your calendar with qualified B2B sales meetings using cold email and LinkedIn outreach — no ad spend required.",
+    "Most B2B teams struggle to book meetings consistently. This playbook shows 7 proven tactics — cold email, LinkedIn, and multi-touch outreach — that generate 10–20 qualified meetings/month without ad spend.",
   keywords: [
     "how to get more B2B sales meetings",
     "B2B sales meetings 2026",

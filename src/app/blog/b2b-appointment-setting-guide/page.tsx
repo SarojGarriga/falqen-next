@@ -3,9 +3,9 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "The Complete Guide to B2B Appointment Setting (2026 Edition) — Falqen",
+  title: "B2B Appointment Setting: How It Works, What It Costs & What Results to Expect (2026)",
   description:
-    "Everything you need to know about B2B appointment setting: what it is, how it works, what to look for in an agency, how to measure success, and real benchmarks.",
+    "The definitive guide to B2B appointment setting in 2026. Learn the 10-step process, real benchmarks (10–20 meetings/month), what agencies charge, and how to measure ROI before you buy.",
   keywords: [
     "B2B appointment setting",
     "appointment setting service",

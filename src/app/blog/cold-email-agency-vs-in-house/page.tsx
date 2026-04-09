@@ -3,9 +3,9 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Cold Email Agency vs. In-House SDR: Which Delivers More ROI in 2026? — Falqen",
+  title: "Cold Email Agency vs. In-House SDR Team: Real Cost & ROI Breakdown (2026)",
   description:
-    "A detailed cost and performance comparison between hiring a cold email agency and building an in-house SDR team for B2B lead generation in 2026.",
+    "Agency: $3K–8K/month, live in 14 days. In-house SDR: $6K–10K/month + 90 days to hire. We break down the real numbers, reply rates, and which model wins for B2B companies under $10M ARR.",
   keywords: [
     "cold email agency vs in-house SDR",
     "outsource cold email vs hire SDR",
