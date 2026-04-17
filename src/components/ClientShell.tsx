@@ -3,6 +3,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useContactForm } from "./ContactFormProvider";
+import { ChatWidget } from "./ChatWidget";
 
 export function ClientShell({ children }: { children: React.ReactNode }) {
   const { openForm } = useContactForm();
@@ -11,6 +12,7 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
       <Navbar onCtaClick={openForm} />
       {children}
       <Footer onCtaClick={openForm} />
+      <ChatWidget />
     </>
   );
 }
