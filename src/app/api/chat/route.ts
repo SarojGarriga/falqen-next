@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
         "X-Title": "Falqen Support Chat",
       },
       body: JSON.stringify({
-        model: "anthropic/claude-3-5-haiku",
+        model: "anthropic/claude-3-5-haiku-20241022",
         messages: [{ role: "system", content: systemContent }, ...messages],
         max_tokens: 250,
         temperature: 0.7,
@@ -46,12 +46,15 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      return NextResponse.json({ error: "AI unavailable" }, { status: 500 });
+      const errText = await response.text();
+      console.error("OpenRouter error:", response.status, errText);
+      return NextResponse.json({ error: `AI error: ${response.status}` }, { status: 500 });
     }
 
     const data = await response.json();
     return NextResponse.json({ message: data.choices[0].message.content });
-  } catch {
+  } catch (e) {
+    console.error("Chat route error:", e);
     return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
   }
 }

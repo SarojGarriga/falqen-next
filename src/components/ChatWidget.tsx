@@ -92,11 +92,15 @@ export function ChatWidget() {
         body: JSON.stringify({ messages: next, visitorName: name }),
       });
       const data = await res.json();
-      setMessages((prev) => [...prev, { role: "assistant", content: data.message }]);
-    } catch {
+      if (data.error) {
+        setMessages((prev) => [...prev, { role: "assistant", content: `Error: ${data.error}` }]);
+      } else {
+        setMessages((prev) => [...prev, { role: "assistant", content: data.message }]);
+      }
+    } catch (e) {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Something went wrong. Try again in a moment." },
+        { role: "assistant", content: `Connection error. Try again in a moment.` },
       ]);
     } finally {
       setLoading(false);
