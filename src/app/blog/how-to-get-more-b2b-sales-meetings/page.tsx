@@ -3,16 +3,16 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "How to Get More B2B Sales Meetings in 2026 — 7 Tactics That Actually Work",
+  title: "How to Book More B2B Sales Meetings — 7 Tactics That Work (2026)",
   description:
-    "Most B2B teams struggle to book meetings consistently. This playbook shows 7 proven tactics — cold email, LinkedIn, and multi-touch outreach — that generate 10–20 qualified meetings/month without ad spend.",
+    "7 proven ways to get more B2B sales meetings — cold email, LinkedIn outreach, and multi-touch sequences. No ads. 10–20 meetings/month is realistic.",
   keywords: [
-    "how to get more B2B sales meetings",
-    "B2B sales meetings 2026",
-    "cold email outreach strategy",
-    "book more sales calls",
-    "B2B lead generation without ads",
-    "qualified sales meetings",
+    "book b2b meetings",
+    "get b2b sales meetings",
+    "b2b sales meetings",
+    "how to get sales meetings",
+    "b2b meeting booking",
+    "b2b outreach meetings",
   ],
   openGraph: {
     title: "How to Get More B2B Sales Meetings in 2026",

@@ -3,16 +3,16 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Cold Email Agency vs. In-House SDR Team: Real Cost & ROI Breakdown (2026)",
+  title: "Cold Email Agency vs In-House SDR — Cost, Speed & ROI (2026)",
   description:
-    "Agency: $3K–8K/month, live in 14 days. In-house SDR: $6K–10K/month + 90 days to hire. We break down the real numbers, reply rates, and which model wins for B2B companies under $10M ARR.",
+    "Cold email agency: $3K–8K/month, live in 14 days. In-house SDR: $100K+/year, 90 days to hire. See the full cost breakdown and which wins for B2B companies.",
   keywords: [
-    "cold email agency vs in-house SDR",
-    "outsource cold email vs hire SDR",
-    "B2B cold email agency cost",
-    "SDR vs lead generation agency",
+    "cold email agency",
+    "cold email agency vs in-house",
+    "outsource cold email",
+    "cold email agency cost",
     "cold email agency ROI",
-    "outsource B2B prospecting",
+    "hire cold email agency",
   ],
   openGraph: {
     title: "Cold Email Agency vs. In-House SDR: Which Delivers More ROI?",

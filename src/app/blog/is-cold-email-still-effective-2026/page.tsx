@@ -3,7 +3,7 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Is Cold Email Still Effective in 2026? (Honest Answer + Data)",
+  title: "Does Cold Email Still Work in 2026? Real Data & Benchmarks",
   description:
     "Cold email open rates, reply rates, and ROI benchmarks for 2026. The honest answer on whether cold email still works for B2B — and what separates campaigns that get meetings from ones that get ignored.",
   keywords: [

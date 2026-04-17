@@ -7,17 +7,16 @@ import { LangProvider } from "@/components/LangProvider";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Falqen | B2B Appointment Setting & Qualified Meeting Generation",
+  title: "Cold Email Agency for B2B — Falqen",
   description:
-    "We fill your calendar with qualified sales meetings. Done-for-you cold email and LinkedIn outreach for B2B companies. Start getting meetings in 7–14 days.",
+    "Cold email and LinkedIn outreach agency for B2B companies. We book qualified sales meetings for you — live in 7–14 days, no long-term contracts.",
   keywords: [
-    "B2B appointment setting",
-    "qualified sales meetings",
-    "cold email outreach",
-    "LinkedIn outreach",
-    "lead generation",
-    "B2B lead gen",
-    "sales meetings",
+    "cold email agency",
+    "b2b appointment setting agency",
+    "cold email service",
+    "outsource cold email",
+    "b2b lead generation agency",
+    "appointment setting agency",
   ],
   authors: [{ name: "Falqen" }],
   openGraph: {

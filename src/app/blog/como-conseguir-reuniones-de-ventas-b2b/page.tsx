@@ -3,17 +3,16 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Cómo Conseguir Más Reuniones de Ventas B2B en 2026 (Sin Gastar en Publicidad) — Falqen",
+  title: "Reuniones B2B — Cómo Conseguir Más Reuniones de Ventas (2026)",
   description:
-    "Guía completa para llenar tu calendario con reuniones de ventas calificadas usando email frío y LinkedIn. Sin depender de Google Ads ni Meta Ads.",
+    "Cómo conseguir reuniones B2B con decisores sin gastar en publicidad. Email frío y LinkedIn que generan 10–20 reuniones calificadas al mes.",
   keywords: [
-    "cómo conseguir reuniones de ventas B2B",
-    "reuniones de ventas calificadas",
-    "email frío B2B 2026",
-    "prospección outbound B2B",
-    "generación de leads sin publicidad",
-    "cómo conseguir clientes B2B",
-    "outreach LinkedIn B2B España",
+    "reuniones b2b",
+    "conseguir reuniones b2b",
+    "reuniones de ventas b2b",
+    "agencia email frio",
+    "como conseguir clientes b2b",
+    "prospección b2b",
   ],
   openGraph: {
     title: "Cómo Conseguir Más Reuniones de Ventas B2B en 2026",

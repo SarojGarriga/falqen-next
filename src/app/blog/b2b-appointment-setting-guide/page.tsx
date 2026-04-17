@@ -3,17 +3,16 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "B2B Appointment Setting: How It Works, What It Costs & What Results to Expect (2026)",
+  title: "B2B Appointment Setting — How It Works, Cost & Results (2026)",
   description:
-    "The definitive guide to B2B appointment setting in 2026. Learn the 10-step process, real benchmarks (10–20 meetings/month), what agencies charge, and how to measure ROI before you buy.",
+    "What is B2B appointment setting, what does it cost, and what results should you expect? Real benchmarks: 10–20 meetings/month. Everything before you hire an agency.",
   keywords: [
-    "B2B appointment setting",
-    "appointment setting service",
-    "B2B appointment setting guide",
-    "how does appointment setting work",
+    "b2b appointment setting",
     "appointment setting agency",
-    "qualified meeting booking B2B",
-    "B2B sales pipeline",
+    "appointment setting service",
+    "b2b appointment setting agency",
+    "outsource appointment setting",
+    "appointment setting cost",
   ],
   openGraph: {
     title: "The Complete Guide to B2B Appointment Setting (2026)",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "How to Get Meetings with CEOs and VPs Using Cold Email (2026 Guide)",
+  title: "Cold Email to CEOs and VPs — How to Book Executive Meetings (2026)",
   description:
     "A proven playbook for booking sales meetings with C-suite and VP-level executives via cold email and LinkedIn in 2026. Includes subject lines, email frameworks, and targeting strategies that work.",
   keywords: [

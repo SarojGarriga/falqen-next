@@ -3,7 +3,7 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Why Your Cold Email Is Not Getting Replies (10 Real Reasons + Fixes)",
+  title: "Cold Email Not Getting Replies? 10 Reasons + Fixes (2026)",
   description:
     "Your cold email open rates are low or your replies have dried up. Here are the 10 most common reasons cold email campaigns fail — and exactly what to fix for each one.",
   keywords: [

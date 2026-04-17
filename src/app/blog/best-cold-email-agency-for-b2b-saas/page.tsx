@@ -3,7 +3,7 @@ import Link from "next/link";
 import Schema from "@/components/Schema";
 
 export const metadata: Metadata = {
-  title: "Best Cold Email Agency for B2B SaaS (2026) — Ranked & Reviewed",
+  title: "Best Cold Email Agency for SaaS — Ranked & Reviewed (2026)",
   description:
     "The top cold email agencies for B2B SaaS companies in 2026, ranked by results, pricing, and SaaS specialization. Who actually books demos for SaaS — and who to avoid.",
   keywords: [
